@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HitungCepat.Views.PlayPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="pagePlay" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
+            <ProgressBar x:Name="prgHealth" Progress="100" WidthRequest="300" HeightRequest="10" VerticalOptions="Start" Margin="20" />
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Label x:Name="labelQuest"  FontSize="70" FontAttributes="Bold" Margin="20" />
+                <Entry x:Name="labelAnswer" HorizontalOptions="CenterAndExpand" FontSize="70" FontAttributes="Bold" BackgroundColor="Transparent" HorizontalTextAlignment="Center"  WidthRequest="200" Placeholder="?" Keyboard="Numeric" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Horizontal" Margin="20">
+                <Button x:Name="btnCheck" Text="Cek" WidthRequest="150" Margin="5" Clicked="OnButtonPlayPageClicked" />
+                <Button x:Name="btnGiveUp" Text="Nyerah" WidthRequest="150" Margin="5" Clicked="OnButtonPlayPageClicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

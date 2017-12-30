@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HitungCepat.Views.RankingPage">
+    <ContentPage.Content>
+        <Grid Margin="10" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ActivityIndicator x:Name="syncIndicator" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" />
+            <Label Text="Skor Pemain" FontSize="Large" Grid.Row="0" />
+            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Label Text="Nama" FontSize="18" HorizontalOptions="StartAndExpand" />
+                <Label Text="Mudah" FontSize="18" />
+                <Label Text="Sedang" FontSize="18" />
+                <Label Text="Sulit" FontSize="18" />
+            </StackLayout>
+            <ListView x:Name="listPemain" IsPullToRefreshEnabled="True" Refreshing="ListPemain_Refreshing" Grid.Row="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nama}" FontSize="Medium" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding SkorMudah}" WidthRequest="40" HorizontalTextAlignment="Center" FontSize="Medium" />
+                                <Label Text="{Binding SkorSedang}" WidthRequest="40" HorizontalTextAlignment="Center" FontSize="Medium" />
+                                <Label Text="{Binding SkorSulit}" WidthRequest="40" HorizontalTextAlignment="Center" FontSize="Medium" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btnHome" Text="Beranda" Grid.Row="3" HorizontalOptions="CenterAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

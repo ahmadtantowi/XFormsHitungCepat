@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HitungCepat.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="20">
+            <Label HorizontalOptions="Center" FontSize="Large" Text="Hitung Cepat"/>
+            <Label HorizontalOptions="Center" Text="Seberapa cepat Anda Menghitung?"/>
+            <Label HorizontalOptions="Center" Text="Jawab setiap perhitungan dalam aplikasi ini!"/>
+            <Label />
+            <StackLayout Orientation="Vertical">
+                <Label Text="Nama saya:" HorizontalOptions="Center" />
+                <Entry x:Name="myName" Text="Anonim" WidthRequest="200" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
+                <Picker x:Name="myLevel" Title="Pilih level" WidthRequest="200" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="OnPickerSelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Mudah</x:String>
+                        <x:String>Sedang</x:String>
+                        <x:String>Sulit</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <Label Margin="5" />
+            <StackLayout>
+                <Button x:Name="btnPlay" Text="Main" IsEnabled="False" Clicked="OnButtonClicked"/>
+                <Button x:Name="btnRanking" Text="Papan Skor" Clicked="OnButtonClicked"/>
+                <!--<Button x:Name="btnSetting" Text="Pengaturan"/>-->
+            </StackLayout>
+            <Label Margin="20" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

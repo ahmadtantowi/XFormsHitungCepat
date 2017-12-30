@@ -13,7 +13,7 @@ namespace HitungCepat
 		{
 			InitializeComponent();
 
-			MainPage = new HitungCepat.MainPage();
+			MainPage = new Views.HomePage();
 		}
 
 		protected override void OnStart ()
