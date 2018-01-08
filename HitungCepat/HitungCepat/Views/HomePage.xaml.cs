@@ -48,5 +48,10 @@ namespace HitungCepat.Views
 
             Application.Current.Properties["myName"] = myName.Text;
         }
-	}
+
+        protected override bool OnBackButtonPressed()
+        {
+            return false;
+        }
+    }
 }

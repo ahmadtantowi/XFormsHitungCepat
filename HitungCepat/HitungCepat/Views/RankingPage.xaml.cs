@@ -56,5 +56,10 @@ namespace HitungCepat.Views
                 await DisplayAlert("Refresh error!", "Couldn't refresh data (" + error.Message + ")", "OK");
             }
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return false;
+        }
     }
 }

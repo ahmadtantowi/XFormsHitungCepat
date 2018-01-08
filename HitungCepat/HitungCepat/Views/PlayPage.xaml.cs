@@ -121,5 +121,10 @@ namespace HitungCepat.Views
                     break;
             }
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return false;
+        }
     }
 }

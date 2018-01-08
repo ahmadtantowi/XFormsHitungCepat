@@ -23,7 +23,6 @@
             <StackLayout>
                 <Button x:Name="btnPlay" Text="Main" IsEnabled="False" Clicked="OnButtonClicked"/>
                 <Button x:Name="btnRanking" Text="Papan Skor" Clicked="OnButtonClicked"/>
-                <!--<Button x:Name="btnSetting" Text="Pengaturan"/>-->
             </StackLayout>
             <Label Margin="20" />
         </StackLayout>

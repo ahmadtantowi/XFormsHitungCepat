@@ -13,7 +13,6 @@ namespace HitungCepat.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ResultPage : ContentPage
 	{
-        //string myId = Application.Current.Properties["myId"].ToString();
         string myName = Application.Current.Properties["myName"].ToString();
         int myScore = Convert.ToInt32(Application.Current.Properties["myScore"]);
         int myLevel = Convert.ToInt32(Application.Current.Properties["myLevel"]);
@@ -46,7 +45,6 @@ namespace HitungCepat.Views
             {
                 pemain = new Models.Pemain()
                 {
-                    //Id = myId,
                     Nama = myName,
                     SkorMudah = myScore,
                 };
@@ -55,7 +53,6 @@ namespace HitungCepat.Views
             {
                 pemain = new Models.Pemain()
                 {
-                    //Id = myId,
                     Nama = myName,
                     SkorSedang = myScore,
                 };
@@ -64,7 +61,6 @@ namespace HitungCepat.Views
             {
                 pemain = new Models.Pemain()
                 {
-                    //Id = myId,
                     Nama = myName,
                     SkorSulit = myScore,
                 };
@@ -80,6 +76,11 @@ namespace HitungCepat.Views
                 await DisplayAlert("Keterangan", "Data gagal disimpan. \nCek koneksi Internet", "Tutup");
                 Debug.WriteLine("Error wa. " + err.Message);
             }
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return false;
         }
     }
 }
